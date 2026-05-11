@@ -1,3 +1,5 @@
+![main](./gallery/main.png)
+
 # ネットワークアダプター切り替えツール
 
 [![CI](https://github.com/roflsunriz/network-adaptor-switcher/actions/workflows/ci.yml/badge.svg)](https://github.com/roflsunriz/network-adaptor-switcher/actions/workflows/ci.yml)
