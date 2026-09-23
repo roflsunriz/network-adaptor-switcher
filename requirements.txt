@@ -9,7 +9,7 @@ ruff==0.8.4
 black==26.3.1
 
 # テストフレームワーク
-pytest==9.0.3
+pytest==9.1.1
 pytest-cov==6.0.0
 pytest-mock==3.14.0
 
