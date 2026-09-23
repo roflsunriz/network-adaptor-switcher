@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- CI実行環境とリリース処理の保守継続のため、GitHub Actionsを最新メジャーへ更新した（actions/setup-python v5→v7、actions/checkout v4→v7、codecov/codecov-action v4→v7、actions/dependency-review-action v4→v5、softprops/action-gh-release v2→v3）。
+- 型チェックとカバレッジ計測の保守継続のため、開発依存関係を更新した（mypy 1.13.0→2.3.1、pytest-cov 6.0.0→7.1.0）。mypy 2.3.1のstrictモードでもソース変更なしで検査に合格することを確認した。
+
 - 依存更新を安全に省力化するため、Dependabot の patch／minor PR を既存 CI の全チェック成功後に自動取り込みし、失敗ジョブを一度再実行する設定を追加した。
 - 作業開始時の共通指針見落としを防ぐため、調査やコマンド実行より前に `COMMON-AGENTS.md` を先頭から末尾まで読み、EOFを確認する必須ゲートを追加した。
 

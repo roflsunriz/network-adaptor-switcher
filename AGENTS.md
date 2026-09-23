@@ -17,3 +17,9 @@ Get-Content -Raw -LiteralPath .\COMMON-AGENTS.md
 
 - 作業前にこのリポジトリの `README.md`、設定ファイル、CI 定義を確認する。
 - 追加のプロジェクト固有ルールが必要になった場合は、このファイルに追記する。
+
+## 作業で判明した重要事項
+
+- Dependabotのメジャー更新PR（#1〜#6・#9）は自動取り込み対象外のため、`gh pr checks` で全件passを確認してから `gh pr merge --squash` で順次マージする。`ci.yml`・`release.yml`・`dependency-review.yml` に重なる差分でも、squashマージは競合なく連続適用できた（2026-09-23確認）。
+- mypy 1.13.0→2.3.1のメジャー更新後も、ソース変更なしで `mypy src/`（strict）が合格する。検証時は `requirements.txt` の更新版を先にインストールすること。
+- `pip-audit` はプロジェクト依存ではなく環境全体を検査対象にするため、結果にagent環境由来のパッケージが混ざる。判定は `requirements.txt` 由来（mypy、ruff、black、pytest系、python-dotenv）に絞って行う。
