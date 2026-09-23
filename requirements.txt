@@ -11,7 +11,7 @@ black==26.3.1
 # テストフレームワーク
 pytest==9.0.3
 pytest-cov==6.0.0
-pytest-mock==3.14.0
+pytest-mock==3.15.1
 
 # 開発ツール
 python-dotenv==1.2.3
