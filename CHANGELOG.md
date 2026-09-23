@@ -29,6 +29,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 依存関係レビューワークフロー
 
 ### Fixed
+
+- CI と Dependabot の分類の実行順が前後しても更新を取りこぼさないよう、同じ PR 番号と head SHA を再照合する経路を追加した。
 - GitHub Actionsでのマニフェストファイルパス解決の問題を修正
   - PyInstallerビルド時に絶対パスを使用するように変更
   - マニフェストファイルの存在確認ステップを追加
