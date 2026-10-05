@@ -13,14 +13,14 @@
 バグを発見した場合：
 
 1. [Issues](https://github.com/roflsunriz/network-adaptor-switcher/issues)で既存の報告を検索
-2. 見つからない場合、[バグ報告テンプレート](https://github.com/roflsunriz/network-adaptor-switcher/issues/new?template=bug_report.md)を使用して新しいIssueを作成
+2. 見つからない場合、[バグ報告テンプレート](https://github.com/roflsunriz/network-adaptor-switcher/issues/new?template=bug_report.yml)を使用して新しいIssueを作成
 
 ### 機能提案
 
 新機能を提案する場合：
 
 1. [Issues](https://github.com/roflsunriz/network-adaptor-switcher/issues)で既存の提案を検索
-2. [機能要望テンプレート](https://github.com/roflsunriz/network-adaptor-switcher/issues/new?template=feature_request.md)を使用して新しいIssueを作成
+2. [機能要望テンプレート](https://github.com/roflsunriz/network-adaptor-switcher/issues/new?template=feature_request.yml)を使用して新しいIssueを作成
 3. コミュニティからのフィードバックを待つ
 
 ### プルリクエスト
@@ -141,7 +141,7 @@ network-adaptor-switcher/
 
 ## 質問がある場合
 
-- [Discussions](https://github.com/roflsunriz/network-adaptor-switcher/discussions)で質問してください
+- [Issue作成画面](https://github.com/roflsunriz/network-adaptor-switcher/issues/new/choose)で質問してください。秘密情報は記載しないでください。
 - [Issues](https://github.com/roflsunriz/network-adaptor-switcher/issues)で既存の議論を確認
 
 ## ライセンス

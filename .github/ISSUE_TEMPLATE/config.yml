@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
   - name: 質問・サポート
-    url: https://github.com/{owner}/{repo}/discussions
-    about: 使い方やトラブルシューティングについては Discussions をご利用ください
+    url: https://github.com/roflsunriz/network-adaptor-switcher/issues/new/choose
+    about: READMEを確認しても解決しない場合は、公開できる範囲の情報でIssueを作成してください。
