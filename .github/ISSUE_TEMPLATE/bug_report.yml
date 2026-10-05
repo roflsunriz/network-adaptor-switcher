@@ -1,0 +1,109 @@
+name: 不具合報告
+description: バグや問題を報告する
+title: '[Bug] '
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |-
+        再現可能な不具合を報告します。対象環境、再現手順、期待した結果と実際の結果を整理してください。
+        導入・利用・開発方法は [README](https://github.com/roflsunriz/network-adaptor-switcher/blob/HEAD/README.md) を確認してください。
+        本文と添付に秘密情報や個人情報を含めないでください。脆弱性の詳細は公開せず、[セキュリティ方針](https://github.com/roflsunriz/network-adaptor-switcher/blob/HEAD/SECURITY.md) を確認してください。
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: 事前確認
+      options:
+        - label: 同じ内容の既存Issueを検索しました。
+          required: true
+        - label: READMEと関連する利用・更新手順を確認しました。
+          required: true
+  - type: textarea
+    id: original-6
+    attributes:
+      label: 対象環境
+      placeholder: |-
+        該当する項目を記入してください
+
+        - **OS**: Windows 10 / Windows 11
+        - **OSバージョン**: [例: 22H2]
+        - **アプリバージョン**: [例: v1.0.0]
+        - **実行方法**: EXE / Python直接実行
+        - **管理者権限**: あり / なし
+    validations:
+      required: true
+  - type: textarea
+    id: original-1
+    attributes:
+      label: 概要
+      placeholder: バグの内容を簡潔に説明してください
+    validations:
+      required: true
+  - type: textarea
+    id: original-2
+    attributes:
+      label: 再現手順
+      placeholder: "バグを再現するための手順を記載してください\n\n1. \n2. \n3."
+    validations:
+      required: true
+  - type: textarea
+    id: original-3
+    attributes:
+      label: 期待した結果
+      placeholder: 本来どのように動作すべきか説明してください
+    validations:
+      required: true
+  - type: textarea
+    id: original-4
+    attributes:
+      label: 実際の結果
+      placeholder: 実際にどのように動作したか説明してください
+    validations:
+      required: true
+  - type: textarea
+    id: original-5
+    attributes:
+      label: 診断情報
+      placeholder: |-
+        該当する場合、スクリーンショットやエラーログを添付してください
+
+        ```
+        （ログをここに貼り付け）
+        ```
+  - type: textarea
+    id: original-7
+    attributes:
+      label: ネットワークアダプター情報
+      placeholder: |-
+        可能であれば、以下のPowerShellコマンドの結果を貼り付けてください
+
+        ```powershell
+        Get-NetAdapter | Select-Object Name, InterfaceDescription, Status | Format-Table
+        ```
+
+        ```
+        （結果をここに貼り付け）
+        ```
+      description: |-
+        可能であれば、以下のPowerShellコマンドの結果を貼り付けてください
+
+        ```powershell
+        Get-NetAdapter | Select-Object Name, InterfaceDescription, Status | Format-Table
+        ```
+
+        ```
+        （結果をここに貼り付け）
+        ```
+  - type: textarea
+    id: original-8
+    attributes:
+      label: 補足
+      placeholder: その他、問題解決に役立つ情報があれば記載してください
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 公開情報の確認
+      options:
+        - label: 本文・ログ・画像・添付から、認証情報、Cookie、トークン、秘密鍵、個人情報を除いたことを確認しました。
+          required: true

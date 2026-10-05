@@ -65,4 +65,4 @@
 
 ---
 
-このポリシーに関する質問がある場合は、[Discussions](https://github.com/roflsunriz/network-adaptor-switcher/discussions)で質問してください。
+このポリシーに関する質問がある場合は、[Issues](https://github.com/roflsunriz/network-adaptor-switcher/issues)で質問してください。
