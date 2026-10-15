@@ -98,80 +98,45 @@ python src/main.py
 
 ## 実行ファイル（EXE）のビルド
 
+具体的な手順・構成・知見は [findings.md](<findings.md#readme-5>) に移動しました。着手前に該当条件を確認してください。
+
 ### クイックビルド
 
-次のPowerShellスクリプトでビルドします。
+本文は [findings.md](<findings.md#readme-5>) を参照してください。
 
-```powershell
-.\build.ps1
-```
-
-ビルドが成功すると、`dist\NetworkAdapterSwitcher.exe` が生成されます（約12MB）。
-
-生成されたEXEファイルを右クリック → 「管理者として実行」で起動してください。
-
-詳細なビルド手順とオプションについては、[BUILD.md](BUILD.md)を参照してください。
 
 ## 開発者向け
 
+具体的な手順・構成・知見は [findings.md](<findings.md#readme-6>) に移動しました。着手前に該当条件を確認してください。
+
 ### コード品質チェック
+
+本文は [findings.md](<findings.md#readme-6>) を参照してください。
 
 #### 型チェック
 
-```powershell
-mypy src/
-```
+本文は [findings.md](<findings.md#readme-6>) を参照してください。
 
 #### リンターチェック
 
-```powershell
-ruff check src/
-```
+本文は [findings.md](<findings.md#readme-6>) を参照してください。
 
 #### フォーマットチェック
 
-```powershell
-black --check src/
-```
+本文は [findings.md](<findings.md#readme-6>) を参照してください。
 
 #### 自動フォーマット
 
-```powershell
-black src/
-ruff check --fix src/
-```
+本文は [findings.md](<findings.md#readme-6>) を参照してください。
 
 ### テスト実行
 
-```powershell
-pytest tests/
-```
-
-カバレッジレポート付き：
-
-```powershell
-pytest --cov=src --cov-report=html
-```
+本文は [findings.md](<findings.md#readme-6>) を参照してください。
 
 ### プロジェクト構造
 
-```
-network-adaptor-switcher/
-├── src/
-│   ├── __init__.py
-│   ├── main.py              # エントリーポイント
-│   ├── network_manager.py   # ネットワークアダプター管理
-│   ├── gui.py               # GUI実装
-│   └── models/
-│       ├── __init__.py
-│       └── models.py        # 型定義
-├── tests/                   # テストコード
-├── requirements.txt         # 依存パッケージ
-├── pyproject.toml          # プロジェクト設定
-├── .gitignore              # Git除外設定
-├── .env.example            # 環境変数例
-└── README.md               # このファイル
-```
+本文は [findings.md](<findings.md#readme-6>) を参照してください。
+
 
 ## トラブルシューティング
 
@@ -185,7 +150,7 @@ network-adaptor-switcher/
 
 **エラー**: 「イーサネットアダプターが見つかりません」または「Wi-Fiアダプターが見つかりません」
 
-**解決策**: 
+**解決策**:
 1. デバイスマネージャーでアダプターが認識されているか確認
 2. アダプターの名前やインターフェース説明を確認
 3. 必要に応じて `src/network_manager.py` の `_parse_adapter_type` メソッドを調整
@@ -221,26 +186,16 @@ network-adaptor-switcher/
 
 ## CI/CD
 
-このプロジェクトはGitHub Actionsを使用して自動テストとリリースを行っています。
+具体的な手順・構成・知見は [findings.md](<findings.md#readme-10>) に移動しました。着手前に該当条件を確認してください。
 
 ### 自動テスト
 
-- **型チェック**: mypy
-- **リンター**: ruff
-- **フォーマット**: black
-- **単体テスト**: pytest
-- **カバレッジ**: codecov
-
-すべてのプルリクエストは自動的にテストされます。
+本文は [findings.md](<findings.md#readme-10>) を参照してください。
 
 ### 自動リリース
 
-タグ（`v*.*.*`）をプッシュすると、次の処理が自動で実行されます。
+本文は [findings.md](<findings.md#readme-10>) を参照してください。
 
-1. コード品質チェック
-2. EXEファイルのビルド
-3. GitHubリリースの作成
-4. 成果物のアップロード
 
 ## ライセンス
 
@@ -253,4 +208,4 @@ MIT License
 
 ## 依存更新の自動処理
 
-Dependabot は対象の依存関係を毎週確認します。patch／minor 更新は PR のチェック（CI、Dependency Review）が成功した後に自動で squash merge されます。CI の失敗ジョブは 1 回だけ再実行します。再失敗した PR は残して手動で修正します。major 更新は手動で確認します。
+具体的な手順・構成・知見は [findings.md](<findings.md#readme-13>) に移動しました。着手前に該当条件を確認してください。
