@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- GitHub Actions の月間利用時間を抑えるため、Dependabot version update と自動マージを毎週・即時処理から毎月28日（Asia/Tokyo）の月末一括処理へ変更した。
+
 - 品質検査matrixとWindows EXE生成を同時に開始し、matrixは1件の失敗時に残りを中止するようにしてCIの待ち時間を短縮した。
 
 ### Security
