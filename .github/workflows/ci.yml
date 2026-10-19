@@ -6,11 +6,16 @@ on:
   pull_request:
     branches: [ main, develop ]
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   quality-checks:
     name: Code Quality & Tests
     runs-on: windows-latest
     strategy:
+      fail-fast: true
       matrix:
         python-version: ['3.10', '3.11', '3.12']
     
@@ -57,7 +62,6 @@ jobs:
   build-test:
     name: Build EXE Test
     runs-on: windows-latest
-    needs: quality-checks
     
     steps:
     - name: Checkout code

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- 品質検査matrixとWindows EXE生成を同時に開始し、matrixは1件の失敗時に残りを中止するようにしてCIの待ち時間を短縮した。
+
 ### Security
 
 - push前監査で検出された既知の依存脆弱性を解消するため、安全版へ依存関係とロックファイルを更新した。
